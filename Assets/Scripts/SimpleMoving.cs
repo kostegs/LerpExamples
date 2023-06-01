@@ -23,6 +23,11 @@ public class SimpleMoving : MonoBehaviour
             transform.position = Vector2.Lerp(_startPosition, _goalObject.position, delta);
             _elapsedTime += Time.deltaTime;
         }
+        else
+        {
+            transform.position = _goalObject.position;
+        }
+           
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
